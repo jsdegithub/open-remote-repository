@@ -1,0 +1,30 @@
+{
+  "name": "open-remote-repository",
+  "displayName": "Open Remote Repository",
+  "description": "在状态栏添加按钮，点击打开远程仓库。",
+  "version": "0.0.1",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./src/extension.js",
+  "scripts": {
+    "debug": "code --extensionDevelopmentPath=."
+  },
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Open Remote Repository Configuration",
+      "properties": {
+        "openRemoteRepository.repoUrl": {
+          "type": "string",
+          "default": "",
+          "description": "配置远程仓库的地址"
+        }
+      }
+    }
+  }
+}
