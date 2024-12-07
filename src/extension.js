@@ -4,7 +4,7 @@ function activate(context) {
   try {
     // 创建状态栏项
     const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 0);
-    statusBarItem.text = '$(github) GitHub';
+    statusBarItem.text = '$(github)';
     statusBarItem.command = 'openRemoteRepository.openRepo';
     statusBarItem.tooltip = '点击打开远程仓库';
     statusBarItem.show();
