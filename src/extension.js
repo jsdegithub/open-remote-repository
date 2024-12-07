@@ -1,4 +1,5 @@
 const vscode = require('vscode');
+const path = require('path');
 
 function activate(context) {
   try {
@@ -14,10 +15,25 @@ function activate(context) {
 
     // 注册命令
     let disposable = vscode.commands.registerCommand('openRemoteRepository.openRepo', () => {
-      if (!repoUrl) {
-        vscode.window.showWarningMessage('请在设置中配置远程仓库地址');
+      // 获取配置的URL模板
+      let repoUrlTemplate = vscode.workspace.getConfiguration('openRemoteRepository').get('repoUrl');
+
+      if (!repoUrlTemplate || !repoUrlTemplate.includes('${repoName}')) {
+        vscode.window.showWarningMessage('请在设置中配置有效的远程仓库地址模板，需包含 ${repoName} 占位符');
         return;
       }
+
+      // 获取当前工作区
+      const workspaceFolders = vscode.workspace.workspaceFolders;
+      if (!workspaceFolders || workspaceFolders.length === 0) {
+        vscode.window.showWarningMessage('请打开一个项目文件夹');
+        return;
+      }
+
+      // 获取项目根目录的文件夹名并替换模板中的变量
+      const projectName = path.basename(workspaceFolders[0].uri.fsPath);
+      const repoUrl = repoUrlTemplate.replace('${repoName}', projectName);
+
       vscode.env.openExternal(vscode.Uri.parse(repoUrl));
     });
 

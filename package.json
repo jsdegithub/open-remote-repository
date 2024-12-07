@@ -31,7 +31,7 @@
         "openRemoteRepository.repoUrl": {
           "type": "string",
           "default": "",
-          "description": "配置远程仓库的地址"
+          "description": "远程仓库地址模板，使用 ${repoName} 作为占位符（注意：${repoName}是固定写死的内容，不可缺少），它将被替换为当前项目的文件夹名称。例如: https://github.com/username/${repoName}"
         }
       }
     }
