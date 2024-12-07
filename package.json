@@ -12,7 +12,10 @@
   ],
   "main": "./src/extension.js",
   "scripts": {
-    "debug": "code --extensionDevelopmentPath=\"%cd%\" --disable-extensions --new-window"
+    "debug": "nodemon --watch src --exec \"code --extensionDevelopmentPath=%cd% --disable-extensions --new-window\""
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   },
   "contributes": {
     "commands": [

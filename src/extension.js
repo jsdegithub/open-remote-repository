@@ -20,7 +20,7 @@ function activate(context) {
     // 添加更多关键点的日志
     outputChannel.appendLine('▶ 创建状态栏项...');
     // 立即创建状态栏项，不要等待窗口事件
-    const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 1000);
+    const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 0);
 
     statusBarItem.text = '$(github) GitHub';
     statusBarItem.command = 'openRemoteRepository.openRepo';
@@ -31,16 +31,6 @@ function activate(context) {
 
     // 显示一个通知确认扩展已激活
     vscode.window.showInformationMessage('扩展已激活！请查看输出面板');
-
-    // 测试命令是否注册
-    vscode.commands
-      .executeCommand('openRemoteRepository.openRepo')
-      .then(() => {
-        outputChannel.appendLine('命令执行成功');
-      })
-      .catch((err) => {
-        outputChannel.appendLine('命令执行失败: ' + err);
-      });
 
     // 获取配置
     let repoUrl = vscode.workspace.getConfiguration('openRemoteRepository').get('repoUrl');
