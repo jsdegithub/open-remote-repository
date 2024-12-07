@@ -12,9 +12,16 @@
   ],
   "main": "./src/extension.js",
   "scripts": {
-    "debug": "code --extensionDevelopmentPath=."
+    "debug": "code --extensionDevelopmentPath=.",
+    "watch": "code --extensionDevelopmentPath=. --inspect-extensions=9229"
   },
   "contributes": {
+    "commands": [
+      {
+        "command": "openRemoteRepository.openRepo",
+        "title": "打开远程仓库"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "Open Remote Repository Configuration",
