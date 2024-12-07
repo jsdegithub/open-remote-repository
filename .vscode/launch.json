@@ -6,8 +6,6 @@
       "type": "extensionHost",
       "request": "launch",
       "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
-      "preLaunchTask": "",
       "skipFiles": ["<node_internals>/**", "**/node_modules/**"]
     }
   ]

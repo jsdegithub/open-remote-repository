@@ -8,12 +8,11 @@
     "vscode": "^1.50.0"
   },
   "activationEvents": [
-    "*"
+    "onStartupFinished"
   ],
   "main": "./src/extension.js",
   "scripts": {
-    "debug": "code --extensionDevelopmentPath=.",
-    "watch": "code --extensionDevelopmentPath=. --inspect-extensions=9229"
+    "debug": "code --extensionDevelopmentPath=\"%cd%\" --disable-extensions --new-window"
   },
   "contributes": {
     "commands": [
