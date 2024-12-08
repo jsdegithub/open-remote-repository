@@ -10,7 +10,9 @@
     "url": "https://github.com/jsdegithub/open-remote-repository.git"
   },
   "files": [
-    "resources/**"
+    "resources",
+    "resources/guides1.png",
+    "resources/logo.png"
   ],
   "engines": {
     "vscode": "^1.50.0"
