@@ -11,8 +11,8 @@
   },
   "files": [
     "resources",
-    "resources/guides1.png",
-    "resources/logo.png"
+    "src",
+    "README.md"
   ],
   "engines": {
     "vscode": "^1.50.0"
