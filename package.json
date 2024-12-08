@@ -2,7 +2,7 @@
   "name": "open-remote-repository",
   "displayName": "Open Remote Repository",
   "description": "A VSCode extension that adds a status bar button to open the remote repository.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "jinshuo",
   "icon": "resources/logo.png",
   "repository": {
