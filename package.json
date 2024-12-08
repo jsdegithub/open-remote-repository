@@ -7,7 +7,7 @@
   "icon": "resources/logo.png",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/jsdegithub/open-remote-repository.git"
   },
   "engines": {
     "vscode": "^1.50.0"
