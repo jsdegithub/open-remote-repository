@@ -4,6 +4,9 @@ node_modules
 
 package-lock.json
 
+# build files
+*.vsix
+
 # local env files
 .env
 .env.local

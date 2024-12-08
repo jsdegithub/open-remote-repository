@@ -1,9 +1,13 @@
 {
   "name": "open-remote-repository",
   "displayName": "Open Remote Repository",
-  "description": "在状态栏添加按钮，点击打开远程仓库。",
-  "version": "0.0.1",
-  "publisher": "your-name",
+  "description": "A VS Code extension that adds a status bar button to open the remote repository.",
+  "version": "1.0.0",
+  "publisher": "jinshuo",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "engines": {
     "vscode": "^1.50.0"
   },
@@ -15,13 +19,14 @@
     "debug": "nodemon --watch src --exec \"code --extensionDevelopmentPath=%cd% --disable-extensions --new-window\""
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "vsce": "^2.15.0"
   },
   "contributes": {
     "commands": [
       {
         "command": "openRemoteRepository.openRepo",
-        "title": "打开远程仓库"
+        "title": "open remote repository"
       }
     ],
     "configuration": {
@@ -31,7 +36,7 @@
         "openRemoteRepository.repoUrl": {
           "type": "string",
           "default": "",
-          "description": "远程仓库地址模板，使用 ${repoName} 作为占位符（注意：${repoName}是固定写死的内容，不可缺少），它将被替换为当前项目的文件夹名称。例如: https://github.com/username/${repoName}"
+          "description": "Template for the remote repository URL. Use ${repoName} as a placeholder (note: ${repoName} is fixed and cannot be omitted), which will be replaced with the current project's folder name. For example: https://github.com/username/${repoName}"
         }
       }
     }
