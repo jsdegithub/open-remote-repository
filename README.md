@@ -14,7 +14,7 @@
 ## 使用方法
 
 1. 安装插件后，状态栏会显示一个 GitHub 图标按钮。
-   ![使用指南](/resources/screenshots/guides1.png)
+   ![使用指南](https://raw.githubusercontent.com/jsdegithub/open-remote-repository/main/resources/screenshots/guides1.png)
 2. 点击按钮，将打开配置的远程仓库地址。
 3. 你可以在设置中配置远程仓库地址模板，使用 `${repoName}` 作为占位符，它将被当前项目的文件夹名称替换，详见[配置选项](#配置选项)。本插件支持任意代码托管仓跳转，仅需配置对应托管仓库地址即可。
 
