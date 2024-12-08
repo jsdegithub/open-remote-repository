@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/jsdegithub/open-remote-repository.git"
   },
+  "files": [
+    "resources/**"
+  ],
   "engines": {
     "vscode": "^1.50.0"
   },
