@@ -4,13 +4,13 @@
   "description": "A VSCode extension that adds a status bar button to open the remote repository.",
   "version": "1.0.6",
   "publisher": "jinshuo",
-  "icon": "resources/logo.png",
+  "icon": "images/logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/jsdegithub/open-remote-repository.git"
   },
   "files": [
-    "resources",
+    "images",
     "src",
     "README.md"
   ],
@@ -45,6 +45,12 @@
           "description": "Template for the remote repository URL. Use ${repoName} as a placeholder (note: ${repoName} is fixed and cannot be omitted), which will be replaced with the current project's folder name. For example: https://github.com/username/${repoName}"
         }
       }
-    }
+    },
+    "media": [
+      {
+        "path": "./images",
+        "uri": "images"
+      }
+    ]
   }
 }
